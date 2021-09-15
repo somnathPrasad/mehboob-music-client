@@ -1,0 +1,12 @@
+:root{
+    --heading_font:'Poppins', sans-serif;
+    --title_font:'Dancing Script', cursive;
+}
+
+
+.brand-logo{
+    font-family: var(--heading_font);
+}
+.brand-title{
+    font-family: var(--title_font);
+}
