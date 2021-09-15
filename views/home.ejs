@@ -6,16 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">   
+    <script src="https://kit.fontawesome.com/86ee6ee1a0.js" crossorigin="anonymous"></script>    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Mehboob Music Official</title>
 </head>
 <body>
     <div id="main">
-        <header class="flex items-center justify-center flex-col brand-logo pt-5 shadow-xl pb-5">
-            <div class="text-5xl">Mehboob <strong>Music</strong> Official</div>
-            <p class="brand-title">one stop for all your <strong>Music</strong> need</p>
+        <header class="flex items-center justify-center flex-col pt-5 pb-5 header-container">
+            <div class="text-5xl brand-logo text-center">Mehboob <strong>Music</strong> Official</div>
+            <p class="brand-slogan"><strong>Music</strong> till last breath</p>
         </header>
+        <section>
+            <div class="tabs-container flex flex-col pt-10">
+                <ul class="flex items-center justify-center pb-10">
+                    <li class="px-10 text-xl active-tab" onclick="changeTabStatus(event,'youtube-section')" id="tab_youtube">Youtube</li>
+                    <li class="px-10 text-xl" onclick="changeTabStatus(event,'audio-section')" id="tab_audio">Audio</li>
+                    <li class="px-10 text-xl" onclick="changeTabStatus(event,'contact-section')" id="tab_contact">Contact</li>
+                </ul>
+                <section id="youtube-section" class="youtube-section active-section grid lg:grid-cols-2 grid-cols-1 items-center justify-center">
+                    <div class="pl-2 py-2">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iBoQ9byUjQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="pl-2 py-2">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sIuuC1mJ_LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="pl-2 py-2">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ppNvL2CDZ0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
+                </section>
+                <section id="contact-section" class="contact-section flex flex-col justify-center items-center">
+                    <div class="flex items-center justify-center">
+                        <a class="flex items-center justify-center text-3xl px-5" href="mailto: somprasad000@gmail.com"><img class="w-20" src="/images/gmail.png" alt=""></a>
+                        <a href="#" class="px-5"><img class="w-20 pt-5" src="/images/instagram.png" alt=""></a>
+                        <a href="#" class="px-5"><img class="w-20 pt-5" src="/images/linkedin.png" alt=""></a>
+                    </div>
+                </section>
+            </div>
+        </section>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>

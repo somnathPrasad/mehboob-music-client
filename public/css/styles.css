@@ -1,12 +1,37 @@
 :root{
     --heading_font:'Poppins', sans-serif;
     --title_font:'Dancing Script', cursive;
+    --unactive:#6e6d6b
 }
-
 
 .brand-logo{
     font-family: var(--heading_font);
 }
-.brand-title{
+.brand-slogan{
     font-family: var(--title_font);
+}
+.header-container{
+    border-bottom: 1px solid black;
+}
+.tabs-container li{
+    cursor: pointer;
+    color: var(--unactive);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+li.active-tab{
+    color:black;
+    font-size: 1.50rem;
+    line-height: 1.75rem;
+}
+.contact-section{
+    width: 0;
+    transition: width 0.5;
+}
+.youtube-section{
+    width: 0;
+    transition: width 0.5;
+}
+.active-section{
+    width: 100%;
 }
