@@ -25,13 +25,8 @@ li.active-tab{
     line-height: 1.75rem;
 }
 .contact-section{
-    width: 0;
     transition: width 0.5;
 }
 .youtube-section{
-    width: 0;
     transition: width 0.5;
-}
-.active-section{
-    width: 100%;
 }
