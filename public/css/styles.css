@@ -1,5 +1,5 @@
 :root{
-    --heading_font:'Poppins', sans-serif;
+    --heading_font:"Century Gothic", 'Lato', sans-serif;
     --title_font:'Dancing Script', cursive;
     --unactive:#6e6d6b
 }
@@ -26,7 +26,31 @@ li.active-tab{
 }
 .contact-section{
     transition: width 0.5;
+    padding-bottom: 80vh;
 }
 .youtube-section{
     transition: width 0.5;
+}
+.middle-section p{
+    text-align: center;
+    font-family: var(--title_font);
+    position: absolute;
+    bottom: 20%;
+    color: white;
+    left: 0;
+    right: 0;
+}
+.middle-section{
+    position: relative;
+}
+.middle-section div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: linear-gradient(#fff, #232423,0.1);
+    opacity: 0.3;
+}
+main.et-main{
+    padding-bottom: 80vh;
 }

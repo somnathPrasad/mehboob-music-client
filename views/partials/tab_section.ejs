@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/tab.css">
+<section class="et-hero-tabs">
+            <div class="et-hero-tabs-container">
+                <a class="et-hero-tab" onclick="changeTabStatus(event,'youtube-section')" id="tab_youtube" href="#tab-es6">Youtube</a>
+                <a class="et-hero-tab" onclick="changeTabStatus(event,'audio-section')" id="tab_audio" href="#tab-flexbox">Audio</a>
+                <a class="et-hero-tab" onclick="changeTabStatus(event,'contact-section')" id="tab_contact" href="#tab-react">Contact</a>
+                <span class="et-hero-tab-slider"></span>
+              </div>
+</section>
+        <main class="et-main">
+            <section class="et-slide" id="tab-es6">
+                <section id="youtube-section" class="youtube-section grid lg:grid-cols-2 grid-cols-1 items-center justify-center pt-10">
+                    <div class="px-2 py-2 flex items-center justify-center">
+                        <iframe width="460" height="215" src="https://www.youtube.com/embed/sIuuC1mJ_LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="px-2 py-2 flex items-center justify-center">
+                        <iframe width="460" height="215" src="https://www.youtube.com/embed/ppNvL2CDZ0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
+                    </div>
+                    <div class="px-2 py-2 flex items-center justify-center">
+                        <iframe width="460" height="215" src="https://www.youtube.com/embed/iBoQ9byUjQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </section>
+            <section class="et-slide" id="tab-flexbox">
+                <section id="audio-section"></section>
+            </section>
+            <section class="et-slide" id="tab-react">
+                <section id="contact-section" style="display: none;" class="contact-section flex flex-col justify-center items-center">
+                    <div class="grid grid-cols-1">
+                        <a class="flex items-center justify-center text-3xl px-5" href="mailto: somprasad000@gmail.com"><img class="w-20" src="/images/gmail.png" alt="gmail"></a>
+                        <a href="https://www.instagram.com/arif_syed9765" class="px-5 flex items-center justify-center"><img class="w-20 pt-5" src="/images/instagram.png" alt="instagram"></a>
+                        <a href="#" class="px-5 flex items-center justify-center"><img class="w-20 pt-5" src="/images/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.facebook.com/MehboobMusic/" class="px-5 flex items-center justify-center"><img class="w-20 pt-5" src="/images/facebook.png" alt="facebook"></a>
+                    </div>
+                    </section>  
+            </section>
+          </main>
+</section>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+<script src="/js/tab.js"></script>
