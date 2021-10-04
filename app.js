@@ -31,8 +31,12 @@ app.post("/upload/youtube",(req,res)=>{
         var videoId = iframe.split("https://www.youtube.com/watch?v=")[1]
         Youtube.create({id:videoId})
         res.render("upload",{message:"👏👏successfully uploaded👏👏"})
+    }else if(iframe.startsWith("https://youtu.be/")){
+        var videoId = iframe.split("https://youtu.be/")[1]
+        Youtube.create({id:videoId})
+        res.render("upload",{message:"👏👏successfully uploaded👏👏"})
     }else{
-        res.send("broken link!")
+        res.render("upload",{message:"link broken!"})
     }
     res.end
 })
