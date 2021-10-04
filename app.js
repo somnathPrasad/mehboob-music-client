@@ -21,10 +21,6 @@ app.get("/",(req,res)=>{
     })
 })
 
-app.get("upload",(req,res)=>{
-    res.render("admin")
-})
-
 app.get("/upload",(req,res)=>{
     res.render("upload",{message:""})
 })
