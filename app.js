@@ -4,34 +4,41 @@ const port = process.env.PORT || 3000
 const app = express()
 const mongoose = require("mongoose")
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.set("view engine", "ejs")
 app.use(express.static("public"))
-// JqeWeqLQzFTJmXbm
-mongoose.connect("mongodb+srv://admin-somnath:JqeWeqLQzFTJmXbm@cluster0.yp2b7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://admin-somnath:JqeWeqLQzFTJmXbm@cluster0.yp2b7.mongodb.net/mehboobDb?retryWrites=true&w=majority")
 
-const adminSchema = new mongoose.Schema({
-    ip:String
+
+const youtubeSchema = new mongoose.Schema({
+    id:String
 })
-
-const Admin = new mongoose.model("Admin",adminSchema)
+const Youtube = new mongoose.model("youtubeSchema",youtubeSchema)
 
 app.get("/",(req,res)=>{
-    res.render("home")
-})
-app.get("/admin",(req,res)=>{
-    Admin.findOne({ip:req.ip},function(err,result){
-        if(result === null){
-                Admin.create({ip:req.ip},function(err,result){
-                    res.render("admin")
-            })
-        }else{
-            res.render("admin")
-        }
+    Youtube.find({},function(err,data){
+        res.render("home",{videos:data})
     })
 })
 
-app.get("/admin/youtube",function(req,res){
-    
+app.get("upload",(req,res)=>{
+    res.render("admin")
+})
+
+app.get("/upload",(req,res)=>{
+    res.render("upload",{message:""})
+})
+
+app.post("/upload/youtube",(req,res)=>{
+    var iframe = req.body.iframe;
+    if(iframe.startsWith("https://www.youtube.com/watch?v=")){
+        var videoId = iframe.split("https://www.youtube.com/watch?v=")[1]
+        Youtube.create({id:videoId})
+        res.render("upload",{message:"👏👏successfully uploaded👏👏"})
+    }else{
+        res.send("broken link!")
+    }
+    res.end
 })
 
 app.listen(port,()=>{

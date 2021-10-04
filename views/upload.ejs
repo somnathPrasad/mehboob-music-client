@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">   
+    <script src="https://kit.fontawesome.com/86ee6ee1a0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Mehboob Music Official</title>
+</head>
+<body>
+    <div id="main" class="mt-10">
+        <h1 class="text-center text-5xl pb-10 font-bold">Upload</h1>
+        <hr>
+        <div class="flex items-center justify-center">
+            <div class="">
+                <div class="flex items-center justify-center flex-col mt-10">
+                    <span class="text-2xl text-center u-heading pb-10">YouTube</span>
+                    <div class="u-form">
+                        <form action="/upload/youtube" method="POST" class="flex flex-col">
+                            <input class="border w-96 h-20 text-xl" type="url" name="iframe" id="iframe" placeholder="&nbsp Enter Video Link" required>
+                            <button type="submit" class="text-2xl btn-success rounded mt-10 pt-2 pb-2">Upload</button>
+                        </form>
+                        <p class="text-center pt-5"><%= message %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center mt-10">
+            <a href="/" class="text-2xl px-5 pt-3 btn btn-dark">Go to main site ➡</a>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html> 
