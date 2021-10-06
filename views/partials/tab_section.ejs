@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="/css/tab.css">
 <section class="et-hero-tabs mt-10">
-            <div class="et-hero-tabs-container">
+            <div class="et-hero-tabs-container" style="background-color: #A9E4D7;">
                 <a class="et-hero-tab" onclick="changeTabStatus(event,'youtube-section')" id="tab_youtube" href="#tab-es6">Youtube</a>
                 <a class="et-hero-tab" onclick="changeTabStatus(event,'audio-section')" id="tab_audio" href="#tab-flexbox">Audio</a>
                 <a class="et-hero-tab" onclick="changeTabStatus(event,'contact-section')" id="tab_contact" href="#tab-react">Contact</a>
               </div>
 </section>
         <main class="et-main">
-            <section class="et-slide" id="tab-es6">
+            <section class="et-slide" id="tab-es6" style="background-image: linear-gradient(#63B4B8, #fff);">
                 <section id="youtube-section" class="youtube-section grid lg:grid-cols-2 grid-cols-1 items-center justify-center pt-10">
                     <% videos.forEach(function(video){ %>
                         <%- include('video_tile', {id: video.id}); %>

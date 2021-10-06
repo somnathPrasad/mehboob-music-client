@@ -42,5 +42,5 @@ app.post("/upload/youtube",(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(`Mehboob music official listining on port ${port}`)
+    console.log(`Mehboob music official listining on port http://localhost:${port}`)
 })

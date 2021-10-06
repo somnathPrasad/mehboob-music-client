@@ -32,10 +32,11 @@ li.active-tab{
     transition: width 0.5;
 }
 .middle-section p{
+    font-size: 1rem;
     text-align: center;
     font-family: var(--title_font);
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     color: white;
     left: 0;
     right: 0;
@@ -48,9 +49,46 @@ li.active-tab{
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: linear-gradient(#fff, #232423,0.1);
+    background-image: linear-gradient(#63B4B8, #fff);
     opacity: 0.3;
 }
 main.et-main{
-    padding-bottom: 80vh;
+    /* padding-bottom: 80vh; */
 }
+.brand-logo{
+    z-index: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    font-weight: 1000;
+    background: url("../images/back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.logo{
+    position: absolute;
+    top: 0;
+    padding-top: 2rem;
+}
+.logo p{
+    color: #fff;
+}
+.et-hero-tabs{
+    border-radius: 2rem;
+}
+.video-tile iframe{
+    border-radius: 1rem;
+}
+a.et-hero-tab{
+    font-size: 1.2rem;
+    font-family: var(--heading_font);
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 0.1rem #fff;
+}
+
