@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express")
 const ejs = require("ejs")
 const port = process.env.PORT || 3000
@@ -7,8 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.set("view engine", "ejs")
 app.use(express.static("public"))
-mongoose.connect("mongodb+srv://admin-somnath:JqeWeqLQzFTJmXbm@cluster0.yp2b7.mongodb.net/mehboobDb?retryWrites=true&w=majority")
-
+mongoose.connect(process.env.MONGO_URI)
 
 const youtubeSchema = new mongoose.Schema({
     id:String
@@ -21,9 +21,12 @@ app.get("/",(req,res)=>{
     })
 })
 
-app.get("/upload",(req,res)=>{
+app.get("/upload/:password",auth,(req,res)=>{
     res.render("upload",{message:""})
+    console.log(req.params.password)
 })
+
+
 
 app.post("/upload/youtube",(req,res)=>{
     var iframe = req.body.iframe;
@@ -40,6 +43,15 @@ app.post("/upload/youtube",(req,res)=>{
     }
     res.end
 })
+
+function auth(req,res,next){
+    var password = req.params.password;
+    if(password === process.env.ADMIN_PASSWORD){
+        next()
+    }else{
+        res.send("not authorized");
+    }
+}
 
 app.listen(port,()=>{
     console.log(`Mehboob music official listining on port http://localhost:${port}`)
