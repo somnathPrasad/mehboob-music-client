@@ -1,5 +1,7 @@
 :root{
     --heading_font:"Century Gothic", 'Lato', sans-serif;
+    /* --heading_font:'Montserrat Alternates', sans-serif; */
+    /* --heading_font:'Monoton', cursive; */
     --title_font:'Dancing Script', cursive;
     --unactive:#6e6d6b
 }
